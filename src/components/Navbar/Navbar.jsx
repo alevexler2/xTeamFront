@@ -1,23 +1,27 @@
 import{ useState } from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  MenuItem,
+  Button,
+  Tooltip,
+  Avatar,
+  InputBase,
+  Container,
+  ThemeProvider,
+  createTheme,
+  styled,
+  alpha,
+} from '@mui/material';
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import styles from "./Navbar.module.css";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import logoImg from "../../assets/images/Logo.png";
 import SearchIcon from '@mui/icons-material/Search';
-import { styled, alpha } from '@mui/material/styles';
-import InputBase from '@mui/material/InputBase';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import styles from "./Navbar.module.css";
+import logoImg from "../../assets/images/Logo.png";
 
 const pages = ["Favoritos", "Contacto"];
 const settings = ["Iniciar sesion", "Registrarse"];
@@ -188,6 +192,11 @@ const Navbar = () => {
                     </MenuItem>
                   ))}
                 </Menu>
+              </Box>
+              <Box>
+                <IconButton>
+                  <ShoppingCartIcon/>
+                </IconButton>
               </Box>
             </Toolbar>
           </Container>

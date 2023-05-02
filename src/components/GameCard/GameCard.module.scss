@@ -1,0 +1,36 @@
+.cardContainer {
+  height: 125px;
+  width: 250px;
+  transition: 0.5s;
+  margin: 2rem 0;
+
+  &:hover {
+    // height: 250px;
+    transform: scaleY(1.3);
+  }
+
+  &:hover .cardImg {
+    height: 125px;
+  }
+
+  &:hover .cardContent {
+    height: 125px;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+.cardImg {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.cardContent {
+  height: 50%;
+  // height: 0px;
+  background-color: #595959;
+  visibility: hidden;
+}
